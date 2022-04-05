@@ -7,6 +7,9 @@ exports[`Header renders correctly 1`] = `
   <header
     className="sc-dkzDqf heTzSB"
   >
+    <select
+      onChange={[Function]}
+    />
     <img
       alt="logo"
       className="sc-hKMtZM ddOdcB"
