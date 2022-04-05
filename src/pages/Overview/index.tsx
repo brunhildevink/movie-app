@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch'
 import { FetchParams, MotionPicture } from '../../lib/types'
 import { Container, Wrapper } from './Overview.style'
 import { Heading } from '../../components'
-import { MovieDetails } from '../../screens'
+import { MovieDetails, MovieSelect } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
 
 const Overview: React.FC = () => {
@@ -26,17 +26,11 @@ const Overview: React.FC = () => {
     console.log(data)
   }, [data])
 
-  const handleChange = (currentSeason: number) => {
+  const handleSelect = (currentSeason: number) => {
     const newParams: FetchParams = { ...fetchParams }
     newParams.season = currentSeason
     setFetchParams(newParams)
   }
-
-  const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
-    <option key={num} value={num + 1}>
-      Season {num + 1}
-    </option>
-  ))
 
   return (
     <Wrapper>
@@ -46,16 +40,7 @@ const Overview: React.FC = () => {
 
       {data && (
         <Container>
-          <div>
-            {/* dit wordt links */}
-            <select
-              disabled={!(totalSeasons > 0)}
-              key={totalSeasons}
-              onChange={(event) => handleChange(parseInt(event.target.value, 10))}
-            >
-              {renderSelectSeasons}
-            </select>
-          </div>
+          <MovieSelect totalSeasons={totalSeasons} onSelect={handleSelect} />
           <MovieDetails />
         </Container>
       )}

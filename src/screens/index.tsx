@@ -1,3 +1,4 @@
 import MovieDetails from './MovieDetails'
+import MovieSelect from './MovieSelect'
 
-export { MovieDetails }
+export { MovieDetails, MovieSelect }

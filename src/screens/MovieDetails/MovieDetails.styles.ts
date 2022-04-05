@@ -22,7 +22,7 @@ const TitleInformation = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 116px 184px;
+  grid-template-rows: 60% 15% 25%;
   grid-template-columns: 1fr;
 `
 
