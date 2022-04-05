@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Header from '.'
+import Overview from '.'
 
 test('Header renders correctly', () => {
-  const tree = renderer.create(<Header />).toJSON()
+  const tree = renderer.create(<Overview />).toJSON()
   expect(tree).toMatchSnapshot()
 })
