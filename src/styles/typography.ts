@@ -1,7 +1,7 @@
 const fontSizeHeadingOne = 70
 const fontSizeHeadingTwo = 30
-const fontSizeHeadingThree = 25
-const fontSizeHeadingFour = 20
+const fontSizeHeadingThree = 27
+const fontSizeHeadingFour = 18
 
 const fontSizeHeadingOneMobile = 42
 const fontSizeHeadingTwoMobile = 24

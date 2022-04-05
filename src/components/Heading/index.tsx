@@ -56,7 +56,7 @@ const HeadingThree = styled.h3`
 const HeadingFour = styled.h4`
   font-size: ${typography.fontSizeHeadingFourMobile}px;
   line-height: ${typography.lineHeightHeadingFourMobile};
-  font-weight: ${typography.fontWeightBold};
+  font-weight: ${typography.fontWeightRegular};
 
   @media ${breakpoints.md} {
     font-size: ${typography.fontSizeHeadingFour}px;

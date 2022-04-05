@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="sc-hKMtZM jqWWPo"
+>
+  <div
+    className="sc-gsnTZi DWwtJ"
+  />
+  <div
+    className="sc-bczRLJ cRUVyz"
+  >
+    <h4
+      className="sc-iBkjds iXBITT"
+    >
+      Episode 1 — 2011-04-17
+    </h4>
+    <h4
+      className="sc-iBkjds iXBITT"
+    >
+      9/10
+    </h4>
+  </div>
+  <div
+    className="sc-dkzDqf jClAur"
+  >
+    <h3
+      className="sc-gKXOVf erbVqC"
+    >
+      Insecure as fuck
+    </h3>
+    <p
+      className="sc-kDDrLX cdZjdm"
+    >
+      In the wake of her 29th birthday, Issa reflects on her life and relationship choices.
+    </p>
+  </div>
+</div>
+`;

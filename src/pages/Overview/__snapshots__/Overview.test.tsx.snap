@@ -2,10 +2,6 @@
 
 exports[`Header renders correctly 1`] = `
 <div
-  className="sc-bczRLJ kIOTIl"
->
-  <header
-    className="sc-dkzDqf heTzSB"
-  />
-</div>
+  className="sc-gsnTZi jGMfoV"
+/>
 `;

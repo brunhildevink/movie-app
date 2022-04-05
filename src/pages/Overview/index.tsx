@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { FetchParams, MotionPicture } from '../../lib/types'
-import { App, AppHeader } from './Overview.style'
+import { Container, Wrapper } from './Overview.style'
 import { Heading } from '../../components'
+import { MovieDetails } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
 
-const Header: React.FC = () => {
+const Overview: React.FC = () => {
   const [fetchParams, setFetchParams] = useState<FetchParams>({
     t: 'mandalorian',
     plot: 'full',
@@ -38,24 +39,28 @@ const Header: React.FC = () => {
   ))
 
   return (
-    <App>
-      <AppHeader>
-        {loading && <Heading.HeadingFour>Loading...</Heading.HeadingFour>}
+    <Wrapper>
+      {loading && <Heading.HeadingFour>Loading...</Heading.HeadingFour>}
 
-        {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
+      {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
 
-        {data && (
-          <select
-            disabled={!(totalSeasons > 0)}
-            key={totalSeasons}
-            onChange={(event) => handleChange(parseInt(event.target.value, 10))}
-          >
-            {renderSelectSeasons}
-          </select>
-        )}
-      </AppHeader>
-    </App>
+      {data && (
+        <Container>
+          <div>
+            {/* dit wordt links */}
+            <select
+              disabled={!(totalSeasons > 0)}
+              key={totalSeasons}
+              onChange={(event) => handleChange(parseInt(event.target.value, 10))}
+            >
+              {renderSelectSeasons}
+            </select>
+          </div>
+          <MovieDetails />
+        </Container>
+      )}
+    </Wrapper>
   )
 }
 
-export default Header
+export default Overview
