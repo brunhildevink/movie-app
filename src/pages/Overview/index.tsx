@@ -1,44 +1,58 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { FetchParams, MotionPicture } from '../../lib/types'
-import logo from '../../assets/images/logo.svg'
-import { App, Code, AppHeader, Logo } from './Overview.style'
-import { Text } from '../../components'
+import { App, AppHeader } from './Overview.style'
+import { Heading } from '../../components'
+import formatUrl from '../../utils/helpers/formatUrl'
 
 const Header: React.FC = () => {
-  const [seasonIndex, setSeasonIndex] = useState(1)
-  const [fetchParams] = useState<FetchParams>({
-    t: 'game of thrones',
+  const [fetchParams, setFetchParams] = useState<FetchParams>({
+    t: 'mandalorian',
     plot: 'full',
-    season: seasonIndex,
+    season: 1,
   })
 
-  const { data, error, loading } = useFetch<MotionPicture>('/', fetchParams)
+  const { data, error, loading, updateUrl, refetch } = useFetch<MotionPicture>('/', fetchParams)
 
-  const totalSeasons = data && data.totalSeasons ? parseInt(data.totalSeasons, 10) : 0
+  const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 
-  const onChange = (currentSeasonIndex: number) => {
-    setSeasonIndex(currentSeasonIndex)
+  useEffect(() => {
+    updateUrl(formatUrl('/', fetchParams))
+    refetch()
+  }, [fetchParams])
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
+
+  const handleChange = (currentSeason: number) => {
+    const newParams: FetchParams = { ...fetchParams }
+    newParams.season = currentSeason
+    setFetchParams(newParams)
   }
 
   const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
     <option key={num} value={num + 1}>
-      {num + 1}
+      Season {num + 1}
     </option>
   ))
 
   return (
     <App>
       <AppHeader>
-        {loading && <div>Loading...</div>}
-        {error && <div>An error occurred...</div>}
-        <select key={totalSeasons} onChange={(event) => onChange(parseInt(event.target.value, 10))}>
-          {renderSelectSeasons}
-        </select>
-        <Logo src={logo} alt="logo" />
-        <Text.Regular>
-          Edit <Code>src/App.tsx</Code> and save to reload.
-        </Text.Regular>
+        {loading && <Heading.HeadingFour>Loading...</Heading.HeadingFour>}
+
+        {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
+
+        {data && (
+          <select
+            disabled={!(totalSeasons > 0)}
+            key={totalSeasons}
+            onChange={(event) => handleChange(parseInt(event.target.value, 10))}
+          >
+            {renderSelectSeasons}
+          </select>
+        )}
       </AppHeader>
     </App>
   )

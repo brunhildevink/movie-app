@@ -1,18 +1,28 @@
 import { useState, useEffect } from 'react'
 import formatUrl from '../utils/helpers/formatUrl'
 
+interface Params {
+  [key: string]: any
+}
+
 interface State<T> {
   data?: T
   error?: Error
   loading: boolean
   updateUrl: React.Dispatch<React.SetStateAction<string>>
+  refetch: () => void
 }
 
-const useFetch = <T,>(path: string, params: any, skip = false): State<T> => {
+const useFetch = <T,>(path: string, params: Params, skip = false): State<T> => {
   const [url, updateUrl] = useState(formatUrl(path, params))
   const [data, setData] = useState<T>()
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<Error | undefined>(undefined)
+  const [refetchIndex, setRefetchIndex] = useState(0)
+
+  const refetch = () => {
+    setRefetchIndex((prevRefetchIndex) => prevRefetchIndex + 1)
+  }
 
   const fetchData = async () => {
     if (skip) return
@@ -26,17 +36,18 @@ const useFetch = <T,>(path: string, params: any, skip = false): State<T> => {
       } else {
         setError(result)
       }
-      setLoading(false)
     } catch (err) {
       if (err instanceof Error) setError(err)
+    } finally {
+      setLoading(false)
     }
   }
 
   useEffect(() => {
     fetchData()
-  }, [url])
+  }, [url, refetchIndex])
 
-  return { data, loading, error, updateUrl }
+  return { data, loading, error, updateUrl, refetch }
 }
 
 export default useFetch

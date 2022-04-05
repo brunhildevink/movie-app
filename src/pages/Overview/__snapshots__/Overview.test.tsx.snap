@@ -6,26 +6,6 @@ exports[`Header renders correctly 1`] = `
 >
   <header
     className="sc-dkzDqf heTzSB"
-  >
-    <select
-      onChange={[Function]}
-    />
-    <img
-      alt="logo"
-      className="sc-hKMtZM ddOdcB"
-      src="logo.svg"
-    />
-    <p
-      className="sc-iqcoie cgQLPp"
-    >
-      Edit 
-      <code
-        className="sc-gsnTZi gTCnJi"
-      >
-        src/App.tsx
-      </code>
-       and save to reload.
-    </p>
-  </header>
+  />
 </div>
 `;
