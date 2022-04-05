@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     season: 1,
   })
 
-  const { data, error, loading, updateUrl, refetch } = useFetch<MotionPicture>('/', fetchParams)
+  const { data, error, loading, refetch, updateUrl } = useFetch<MotionPicture>('/', fetchParams)
 
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 

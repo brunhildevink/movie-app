@@ -9,11 +9,11 @@ interface State<T> {
   data?: T
   error?: Error
   loading: boolean
-  updateUrl: React.Dispatch<React.SetStateAction<string>>
   refetch: () => void
+  updateUrl: React.Dispatch<React.SetStateAction<string>>
 }
 
-const useFetch = <T,>(path: string, params: Params, skip = false): State<T> => {
+const useFetch = <T,>(path: string, params: Params): State<T> => {
   const [url, updateUrl] = useState(formatUrl(path, params))
   const [data, setData] = useState<T>()
   const [loading, setLoading] = useState<boolean>(false)
@@ -25,8 +25,6 @@ const useFetch = <T,>(path: string, params: Params, skip = false): State<T> => {
   }
 
   const fetchData = async () => {
-    if (skip) return
-
     setLoading(true)
     try {
       const response = await fetch(url)
@@ -47,7 +45,7 @@ const useFetch = <T,>(path: string, params: Params, skip = false): State<T> => {
     fetchData()
   }, [url, refetchIndex])
 
-  return { data, loading, error, updateUrl, refetch }
+  return { data, error, loading, refetch, updateUrl }
 }
 
 export default useFetch
