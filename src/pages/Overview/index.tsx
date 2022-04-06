@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
-import { FetchParams, MotionPicture } from '../../lib/types'
+import { FetchParams, Season } from '../../lib/types'
 import { Container, Wrapper } from './Overview.style'
 import { Heading } from '../../components'
 import { MovieDetails, MovieSelect } from '../../screens'
@@ -13,7 +13,7 @@ const Overview: React.FC = () => {
     season: 1,
   })
 
-  const { data, error, loading, refetch, updateUrl } = useFetch<MotionPicture>('/', fetchParams)
+  const { data, error, loading, refetch, updateUrl } = useFetch<Season>('/', fetchParams)
 
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 

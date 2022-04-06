@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import useFetch from '../../hooks/useFetch'
+import { EpisodeDetailed } from '../../lib/types'
 import Text from '../Text'
 
 interface Props {
-  description: string
-  episodeNumber: string
-  image: string
-  title: string
+  id: string
 }
 
 const Description = styled.div`
@@ -52,19 +51,27 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const Card: React.FC<Props> = ({ description, episodeNumber, image, title }) => (
-  <Wrapper>
-    <Image img={image} />
-    <EpisodeNumber>
-      <Text.Regular>{episodeNumber}</Text.Regular>
-    </EpisodeNumber>
-    <Title>
-      <Text.Bold>{title}</Text.Bold>
-    </Title>
-    <Description>
-      <Text.Regular>{description}</Text.Regular>
-    </Description>
-  </Wrapper>
-)
+const Card: React.FC<Props> = ({ id }) => {
+  const { data } = useFetch<EpisodeDetailed>('/', { i: id })
+
+  return (
+    <div>
+      {data && (
+        <Wrapper>
+          <Image img={data.Poster} />
+          <EpisodeNumber>
+            <Text.Regular>{data.Episode}</Text.Regular>
+          </EpisodeNumber>
+          <Title>
+            <Text.Bold>{data.Title}</Text.Bold>
+          </Title>
+          <Description>
+            <Text.Regular>{data.Plot}</Text.Regular>
+          </Description>
+        </Wrapper>
+      )}
+    </div>
+  )
+}
 
 export default Card

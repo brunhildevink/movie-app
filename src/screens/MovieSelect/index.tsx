@@ -19,15 +19,7 @@ const MovieSelect: React.FC<Props> = ({ episodes, title, totalSeasons, onSelect 
     </option>
   ))
 
-  const renderCards = episodes.map((episode) => (
-    <Card
-      key={episode.imdbID}
-      description="In nostrud aute adipisicing nostrud duis et qui quis aute cillum id deserunt nisi."
-      episodeNumber={episode.Episode}
-      image={image}
-      title={episode.Title}
-    />
-  ))
+  const renderCards = episodes.map((episode) => <Card key={episode.imdbID} id={episode.imdbID} />)
 
   return (
     <Wrapper img={image}>

@@ -1,38 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card renders correctly 1`] = `
-<div
-  className="sc-ftvSup gPyuec"
->
-  <div
-    className="sc-gKXOVf gqBaPE"
-  />
-  <span
-    className="sc-jSMfEi dbSAYs"
-  >
-    <p
-      className="sc-hKMtZM AqaKO"
-    >
-      1
-    </p>
-  </span>
-  <div
-    className="sc-iBkjds hxeFpw"
-  >
-    <p
-      className="sc-bczRLJ jzQJTL"
-    >
-      test
-    </p>
-  </div>
-  <div
-    className="sc-eCYdqJ hnWALs"
-  >
-    <p
-      className="sc-hKMtZM AqaKO"
-    >
-      lorem ipsum
-    </p>
-  </div>
-</div>
-`;
+exports[`Card renders correctly 1`] = `<div />`;
