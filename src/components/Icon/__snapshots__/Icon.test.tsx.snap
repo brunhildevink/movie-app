@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component test Star Icon renders correctly 1`] = `
+<svg
+  style={
+    Object {
+      "display": "inline",
+      "fill": "#efd358",
+      "height": 24,
+      "lineHeight": 1,
+      "verticalAlign": "middle",
+      "width": 24,
+    }
+  }
+  viewBox="0 0 28 28"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    rating
+  </title>
+  <path
+    d="m14 .692 4.324 8.761 9.668 1.406-6.996 6.819 1.651 9.63L14 22.76l-8.647 4.547 1.65-9.63-6.995-6.82 9.668-1.405L14 .693Z"
+    fill="#efd358"
+  />
+</svg>
+`;

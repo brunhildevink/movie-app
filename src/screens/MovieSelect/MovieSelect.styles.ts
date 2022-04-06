@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../styles'
 
 const EpisodeSelection = styled.div`
   display: grid;
@@ -21,7 +22,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div<{ img: string }>`
   display: inline-grid;
-  color: white;
+  color: ${colors.white};
   height: 100%;
   background: linear-gradient(236deg, rgba(31, 0, 19, 0.444437149859944) 0%, rgba(215, 0, 133, 0.217546393557423) 100%),
     ${({ img }) => `url(${img})`} no-repeat center center;

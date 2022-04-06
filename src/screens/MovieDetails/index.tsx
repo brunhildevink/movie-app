@@ -1,7 +1,8 @@
 import React from 'react'
-import { EpisodeInformation, Image, TitleInformation, Wrapper } from './MovieDetails.styles'
+import { EpisodeInformation, Image, Rating, TitleInformation, Wrapper } from './MovieDetails.styles'
 import image from '../../assets/images/1.1.jpg'
-import { Heading, Text } from '../../components'
+import { Heading, Icon, Text } from '../../components'
+import { colors } from '../../styles'
 
 // interface Props {
 //   date: string
@@ -10,17 +11,30 @@ import { Heading, Text } from '../../components'
 //   rating: string
 //   title: string
 // }
+const description =
+  'Aute occaecat consequat labore occaecat do fugiat consectetur labore eu. Velit culpa amet labore voluptate ullamco proident sunt excepteur exercitation non incididunt eu esse labore. Culpa excepteur nulla irure ex minim cupidatat et voluptate esse Lorem ullamco laboris incididunt magna. Velit aute quis qui aliquip ullamco ad irure duis excepteur cillum excepteur officia nisi. Pariatur occaecat dolor anim enim. Sunt ex ullamco aute amet cupidatat ad proident cillum aliquip amet id velit.'
+const title = 'The Mandalorian'
+const episode = 1
+const date = '20/20/2022'
+const rating = 9
 
 const MovieDetails: React.FC = () => (
   <Wrapper>
     <Image img={image} />
     <EpisodeInformation>
-      <Heading.HeadingFour>Episode 1 — 2011-04-17</Heading.HeadingFour>
-      <Heading.HeadingFour>9/10</Heading.HeadingFour>
+      <Heading.HeadingFour>
+        Episode {episode} — {date}
+      </Heading.HeadingFour>
+      <Rating>
+        <Icon.Star display="inline" fill={colors.yellow} height={24} title="rating" width={24} />
+        <Heading.HeadingFour>
+          <span>{rating}</span>/10
+        </Heading.HeadingFour>
+      </Rating>
     </EpisodeInformation>
     <TitleInformation>
-      <Heading.HeadingThree>Insecure as fuck</Heading.HeadingThree>
-      <Text.Regular>In the wake of her 29th birthday, Issa reflects on her life and relationship choices.</Text.Regular>
+      <Heading.HeadingThree>{title}</Heading.HeadingThree>
+      <Text.Regular>{description}</Text.Regular>
     </TitleInformation>
   </Wrapper>
 )

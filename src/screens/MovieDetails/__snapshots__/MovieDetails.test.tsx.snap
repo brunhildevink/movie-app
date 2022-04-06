@@ -2,7 +2,7 @@
 
 exports[`MovieDetails renders correctly 1`] = `
 <div
-  className="sc-hKMtZM ieycZq"
+  className="sc-eCYdqJ fBtlEz"
 >
   <div
     className="sc-gsnTZi DWwtJ"
@@ -11,28 +11,60 @@ exports[`MovieDetails renders correctly 1`] = `
     className="sc-bczRLJ cRUVyz"
   >
     <h4
-      className="sc-iBkjds iXBITT"
+      className="sc-ftvSup fYTEFs"
     >
-      Episode 1 — 2011-04-17
+      Episode 
+      1
+       — 
+      20/20/2022
     </h4>
-    <h4
-      className="sc-iBkjds iXBITT"
+    <div
+      className="sc-dkzDqf dXySZZ"
     >
-      9/10
-    </h4>
+      <svg
+        style={
+          Object {
+            "display": "inline",
+            "fill": "#efd358",
+            "height": 24,
+            "lineHeight": 1,
+            "verticalAlign": "middle",
+            "width": 24,
+          }
+        }
+        viewBox="0 0 28 28"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          rating
+        </title>
+        <path
+          d="m14 .692 4.324 8.761 9.668 1.406-6.996 6.819 1.651 9.63L14 22.76l-8.647 4.547 1.65-9.63-6.995-6.82 9.668-1.405L14 .693Z"
+          fill="#efd358"
+        />
+      </svg>
+      <h4
+        className="sc-ftvSup fYTEFs"
+      >
+        <span>
+          9
+        </span>
+        /10
+      </h4>
+    </div>
   </div>
   <div
-    className="sc-dkzDqf jClAur"
+    className="sc-hKMtZM daYKig"
   >
     <h3
-      className="sc-gKXOVf erbVqC"
+      className="sc-iBkjds huGiaA"
     >
-      Insecure as fuck
+      The Mandalorian
     </h3>
     <p
-      className="sc-kDDrLX cdZjdm"
+      className="sc-iqcoie kYFXBb"
     >
-      In the wake of her 29th birthday, Issa reflects on her life and relationship choices.
+      Aute occaecat consequat labore occaecat do fugiat consectetur labore eu. Velit culpa amet labore voluptate ullamco proident sunt excepteur exercitation non incididunt eu esse labore. Culpa excepteur nulla irure ex minim cupidatat et voluptate esse Lorem ullamco laboris incididunt magna. Velit aute quis qui aliquip ullamco ad irure duis excepteur cillum excepteur officia nisi. Pariatur occaecat dolor anim enim. Sunt ex ullamco aute amet cupidatat ad proident cillum aliquip amet id velit.
     </p>
   </div>
 </div>
