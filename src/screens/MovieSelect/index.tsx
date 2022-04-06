@@ -11,16 +11,17 @@ interface Props {
   title: string
   totalSeasons: number
   onSelect: (season: number) => void
+  onClick: (id: string) => void
 }
 
-const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeasons, onSelect }) => {
+const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeasons, onSelect, onClick }) => {
   const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
     <option key={num} value={num + 1}>
       Season {num + 1}
     </option>
   ))
 
-  const renderCards = episodes.map((episode) => <Card key={episode.imdbID} id={episode.imdbID} />)
+  const renderCards = episodes.map((episode) => <Card key={episode.imdbID} id={episode.imdbID} onClick={onClick} />)
 
   return (
     <Wrapper img={image}>

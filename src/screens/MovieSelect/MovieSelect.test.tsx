@@ -56,7 +56,16 @@ const mocks = [
 
 test('MovieSelect renders correctly', () => {
   const tree = renderer
-    .create(<MovieSelect description="hllo" episodes={mocks} title="Hello" totalSeasons={8} onSelect={() => null} />)
+    .create(
+      <MovieSelect
+        onClick={() => null}
+        description="hllo"
+        episodes={mocks}
+        title="Hello"
+        totalSeasons={8}
+        onSelect={() => null}
+      />,
+    )
     .toJSON()
   expect(tree).toMatchSnapshot()
 })

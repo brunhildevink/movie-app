@@ -2,10 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import useFetch from '../../hooks/useFetch'
 import { EpisodeDetailed } from '../../lib/types'
+import { colors } from '../../styles'
+import Skeleton from '../Skeleton'
+// import { colors } from '../../styles'
 import Text from '../Text'
 
 interface Props {
   id: string
+  onClick: (id: string) => void
 }
 
 const Description = styled.div`
@@ -30,8 +34,8 @@ const EpisodeNumber = styled.span`
   justify-content: center;
 `
 
-const Image = styled.div<{ img: string }>`
-  background: ${({ img }) => `url(${img})`} center center no-repeat;
+const Image = styled.div<{ img?: string }>`
+  background: ${({ img }) => (img ? `url(${img}) center center no-repeat` : `${colors.white}`)};
   background-size: cover;
   height: 136px;
   width: 200px;
@@ -46,18 +50,34 @@ const Title = styled.div`
   }
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled.button`
   width: 200px;
   position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  text-align: start;
+  color: ${colors.white};
 `
 
-const Card: React.FC<Props> = ({ id }) => {
-  const { data } = useFetch<EpisodeDetailed>('/', { i: id })
+const Card: React.FC<Props> = ({ id, onClick }) => {
+  const { data, loading } = useFetch<EpisodeDetailed>('/', { i: id })
+
+  if (loading) {
+    return (
+      <div>
+        <Skeleton width="200px" height="136px" margin="" />
+        <Skeleton width="200px" height="16px" margin="14px 0" />
+        <Skeleton width="200px" height="16px" margin="14px 0" />
+        <Skeleton width="200px" height="16px" margin="14px 0" />
+      </div>
+    )
+  }
 
   return (
     <div>
       {data && (
-        <Wrapper>
+        <Wrapper onClick={() => onClick(id)}>
           <Image img={data.Poster} />
           <EpisodeNumber>
             <Text.Regular>{data.Episode}</Text.Regular>
