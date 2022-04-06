@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieSelect renders correctly 1`] = `
+<div
+  className="sc-dkzDqf khSYng"
+>
+  <div
+    className="sc-gsnTZi BqpBJ"
+  >
+    <div>
+      <select
+        disabled={false}
+        onChange={[Function]}
+      >
+        <option
+          value={1}
+        >
+          Season 
+          1
+        </option>
+        <option
+          value={2}
+        >
+          Season 
+          2
+        </option>
+        <option
+          value={3}
+        >
+          Season 
+          3
+        </option>
+        <option
+          value={4}
+        >
+          Season 
+          4
+        </option>
+        <option
+          value={5}
+        >
+          Season 
+          5
+        </option>
+        <option
+          value={6}
+        >
+          Season 
+          6
+        </option>
+        <option
+          value={7}
+        >
+          Season 
+          7
+        </option>
+        <option
+          value={8}
+        >
+          Season 
+          8
+        </option>
+      </select>
+      <h1
+        className="sc-hKMtZM cqdelg"
+      >
+        Hello
+      </h1>
+      <p
+        className="sc-jqUVSM fCGWQR"
+      >
+        Follows the awkward experiences and racy tribulations of a modern-day mandalorian.
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-bczRLJ hTOvVw"
+  >
+    <div
+      className="sc-breuTD drVLSW"
+    >
+      <div
+        className="sc-crXcEl cbYJrd"
+      />
+      <span
+        className="sc-iqcoie jfHxkK"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          0
+        </p>
+      </span>
+      <div
+        className="sc-evZas fVABzW"
+      >
+        <p
+          className="sc-iBkjds bemswt"
+        >
+          Insecure as fuck
+        </p>
+      </div>
+      <div
+        className="sc-kDDrLX cMrgUd"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          In nostrud aute adipisicing nostrud duis et qui quis aute cillum id deserunt nisi.
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-breuTD drVLSW"
+    >
+      <div
+        className="sc-crXcEl cbYJrd"
+      />
+      <span
+        className="sc-iqcoie jfHxkK"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          1
+        </p>
+      </span>
+      <div
+        className="sc-evZas fVABzW"
+      >
+        <p
+          className="sc-iBkjds bemswt"
+        >
+          Messy as Fuck
+        </p>
+      </div>
+      <div
+        className="sc-kDDrLX cMrgUd"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          In nostrud aute adipisicing nostrud duis et qui quis aute cillum id deserunt nisi.
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-breuTD drVLSW"
+    >
+      <div
+        className="sc-crXcEl cbYJrd"
+      />
+      <span
+        className="sc-iqcoie jfHxkK"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          2
+        </p>
+      </span>
+      <div
+        className="sc-evZas fVABzW"
+      >
+        <p
+          className="sc-iBkjds bemswt"
+        >
+          Racist as Fuck
+        </p>
+      </div>
+      <div
+        className="sc-kDDrLX cMrgUd"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          In nostrud aute adipisicing nostrud duis et qui quis aute cillum id deserunt nisi.
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-breuTD drVLSW"
+    >
+      <div
+        className="sc-crXcEl cbYJrd"
+      />
+      <span
+        className="sc-iqcoie jfHxkK"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          3
+        </p>
+      </span>
+      <div
+        className="sc-evZas fVABzW"
+      >
+        <p
+          className="sc-iBkjds bemswt"
+        >
+          Thirsty as Fuck 
+        </p>
+      </div>
+      <div
+        className="sc-kDDrLX cMrgUd"
+      >
+        <p
+          className="sc-jqUVSM fCGWQR"
+        >
+          In nostrud aute adipisicing nostrud duis et qui quis aute cillum id deserunt nisi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

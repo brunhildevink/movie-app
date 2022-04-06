@@ -40,7 +40,12 @@ const Overview: React.FC = () => {
 
       {data && (
         <Container>
-          <MovieSelect totalSeasons={totalSeasons} onSelect={handleSelect} />
+          <MovieSelect
+            episodes={data.Episodes}
+            title={data.Title}
+            totalSeasons={totalSeasons}
+            onSelect={handleSelect}
+          />
           <MovieDetails />
         </Container>
       )}

@@ -6,6 +6,15 @@ export interface FetchParams {
   plot?: string
 }
 
+export interface Episode {
+  Title: string
+  Released: string
+  Episode: string
+  imdbRating: string
+  imdbID: string
+  Poster: string
+}
+
 export enum PictureType {
   Movie,
   Series,
@@ -25,6 +34,7 @@ export interface MotionPicture {
   Runtime: string
   Genre: string
   Director: string
+  Episodes: Episode[]
   Writer: string
   Actors: string
   Plot: string

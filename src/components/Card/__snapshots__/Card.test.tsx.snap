@@ -2,13 +2,13 @@
 
 exports[`Card renders correctly 1`] = `
 <div
-  className="sc-gKXOVf hMnmYf"
+  className="sc-ftvSup gPyuec"
 >
   <div
-    className="sc-jSMfEi jSKURl"
+    className="sc-gKXOVf gqBaPE"
   />
   <span
-    className="sc-eCYdqJ dOwZlX"
+    className="sc-jSMfEi dbSAYs"
   >
     <p
       className="sc-hKMtZM AqaKO"
@@ -16,15 +16,23 @@ exports[`Card renders correctly 1`] = `
       1
     </p>
   </span>
-  <p
-    className="sc-bczRLJ jzQJTL"
+  <div
+    className="sc-iBkjds hxeFpw"
   >
-    test
-  </p>
-  <p
-    className="sc-hKMtZM AqaKO"
+    <p
+      className="sc-bczRLJ jzQJTL"
+    >
+      test
+    </p>
+  </div>
+  <div
+    className="sc-eCYdqJ hnWALs"
   >
-    lorem ipsum
-  </p>
+    <p
+      className="sc-hKMtZM AqaKO"
+    >
+      lorem ipsum
+    </p>
+  </div>
 </div>
 `;
