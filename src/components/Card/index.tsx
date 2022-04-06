@@ -4,8 +4,8 @@ import useFetch from '../../hooks/useFetch'
 import { EpisodeDetailed } from '../../lib/types'
 import { colors } from '../../styles'
 import Skeleton from '../Skeleton'
-// import { colors } from '../../styles'
 import Text from '../Text'
+import Icon from '../Icon'
 
 interface Props {
   id: string
@@ -41,6 +41,15 @@ const Image = styled.div<{ img?: string }>`
   width: 200px;
 `
 
+const NotFound = styled.div`
+  background: ${colors.white};
+  height: 136px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 const Title = styled.div`
   p {
     width: 200px;
@@ -58,6 +67,7 @@ const Wrapper = styled.button`
   background: transparent;
   text-align: start;
   color: ${colors.white};
+  cursor: pointer;
 `
 
 const Card: React.FC<Props> = ({ id, onClick }) => {
@@ -78,7 +88,13 @@ const Card: React.FC<Props> = ({ id, onClick }) => {
     <div>
       {data && (
         <Wrapper onClick={() => onClick(id)}>
-          <Image img={data.Poster} />
+          {data.Poster !== 'N/A' ? (
+            <Image img={data.Poster} />
+          ) : (
+            <NotFound>
+              <Icon.Image fill={colors.lightGrey} display="inline" height={40} title="image not found" width={40} />
+            </NotFound>
+          )}
           <EpisodeNumber>
             <Text.Regular>{data.Episode}</Text.Regular>
           </EpisodeNumber>

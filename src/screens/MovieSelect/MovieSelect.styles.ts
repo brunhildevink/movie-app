@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { colors, fonts, typography } from '../../styles'
 
 const EpisodeSelection = styled.div`
   display: grid;
@@ -20,6 +20,14 @@ const Container = styled.div`
   margin-right: auto;
 `
 
+const Select = styled.select`
+  font-family: ${fonts};
+  background-color: transparent;
+  color: ${colors.white};
+  border: none;
+  font-size: ${typography.fontSizeHeadingThree}px;
+`
+
 const Wrapper = styled.div<{ img: string }>`
   display: inline-grid;
   color: ${colors.white};
@@ -33,4 +41,4 @@ const Wrapper = styled.div<{ img: string }>`
   grid-template-rows: 60% 40%;
 `
 
-export { Container, EpisodeSelection, Wrapper }
+export { Container, EpisodeSelection, Select, Wrapper }

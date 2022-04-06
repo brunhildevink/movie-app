@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, EpisodeSelection, Wrapper } from './MovieSelect.styles'
+import { Container, EpisodeSelection, Select, Wrapper } from './MovieSelect.styles'
 import image from '../../assets/images/1.1.jpg'
 import { Heading, Text } from '../../components'
 import Card from '../../components/Card'
@@ -27,13 +27,13 @@ const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeaso
     <Wrapper img={image}>
       <Container>
         <div>
-          <select
+          <Select
             key={totalSeasons}
             disabled={!(totalSeasons > 0)}
             onChange={(event) => onSelect(parseInt(event.target.value, 10))}
           >
             {renderSelectSeasons}
-          </select>
+          </Select>
           <Heading.HeadingOne>{title}</Heading.HeadingOne>
           <Text.Regular>{description}</Text.Regular>
         </div>

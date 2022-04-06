@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { typography } from '../../styles'
+import { colors, typography } from '../../styles'
 
 const EpisodeInformation = styled.div`
   display: flex;
@@ -14,6 +14,19 @@ const Image = styled.div<{ img: string }>`
   background-size: cover;
   height: 100%;
   width: 100%;
+`
+
+const NotFound = styled.div`
+  background: ${colors.white};
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    opacity: 0.5;
+  }
 `
 
 const Rating = styled.div`
@@ -41,4 +54,4 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
 `
 
-export { EpisodeInformation, Image, Rating, TitleInformation, Wrapper }
+export { EpisodeInformation, Image, NotFound, Rating, TitleInformation, Wrapper }
