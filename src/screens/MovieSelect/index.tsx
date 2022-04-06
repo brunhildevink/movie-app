@@ -7,12 +7,13 @@ import { Episode } from '../../lib/types'
 
 interface Props {
   episodes: Episode[]
+  description: string
   title: string
   totalSeasons: number
   onSelect: (season: number) => void
 }
 
-const MovieSelect: React.FC<Props> = ({ episodes, title, totalSeasons, onSelect }) => {
+const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeasons, onSelect }) => {
   const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
     <option key={num} value={num + 1}>
       Season {num + 1}
@@ -33,9 +34,7 @@ const MovieSelect: React.FC<Props> = ({ episodes, title, totalSeasons, onSelect 
             {renderSelectSeasons}
           </select>
           <Heading.HeadingOne>{title}</Heading.HeadingOne>
-          <Text.Regular>
-            Follows the awkward experiences and racy tribulations of a modern-day mandalorian.
-          </Text.Regular>
+          <Text.Regular>{description}</Text.Regular>
         </div>
       </Container>
       <EpisodeSelection>{renderCards}</EpisodeSelection>

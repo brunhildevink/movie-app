@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
-import { FetchParams, Season } from '../../lib/types'
+import { FetchParams, MotionPicture, Season } from '../../lib/types'
 import { Container, Wrapper } from './Overview.style'
 import { Heading } from '../../components'
 import { MovieDetails, MovieSelect } from '../../screens'
@@ -12,6 +12,8 @@ const Overview: React.FC = () => {
     plot: 'full',
     season: 1,
   })
+
+  const motionPicture = useFetch<MotionPicture>('/', { t: 'mandalorian', plot: 'full' })
 
   const { data, error, loading, refetch, updateUrl } = useFetch<Season>('/', fetchParams)
 
@@ -38,11 +40,12 @@ const Overview: React.FC = () => {
 
       {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
 
-      {data && (
+      {data && motionPicture.data && (
         <Container>
           <MovieSelect
             episodes={data.Episodes}
             title={data.Title}
+            description={motionPicture.data.Plot}
             totalSeasons={totalSeasons}
             onSelect={handleSelect}
           />

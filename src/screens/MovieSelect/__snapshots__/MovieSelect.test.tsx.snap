@@ -69,7 +69,7 @@ exports[`MovieSelect renders correctly 1`] = `
       <p
         className="sc-jqUVSM fCGWQR"
       >
-        Follows the awkward experiences and racy tribulations of a modern-day mandalorian.
+        hllo
       </p>
     </div>
   </div>
