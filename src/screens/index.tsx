@@ -1,4 +1,5 @@
+import ErrorScreen from './ErrorScreen'
 import MovieDetails from './MovieDetails'
 import MovieSelect from './MovieSelect'
 
-export { MovieDetails, MovieSelect }
+export { ErrorScreen, MovieDetails, MovieSelect }

@@ -48,7 +48,12 @@ const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeaso
         </div>
       </Container>
       <EpisodeSelection>
-        <Swiper spaceBetween={28} navigation={{ nextEl: '#swiper-next', prevEl: '#swiper-prev' }} slidesPerView="auto">
+        <Swiper
+          initialSlide={0}
+          spaceBetween={28}
+          navigation={{ nextEl: '#swiper-next', prevEl: '#swiper-prev' }}
+          slidesPerView="auto"
+        >
           {renderCards}
         </Swiper>
         <ButtonContainer>

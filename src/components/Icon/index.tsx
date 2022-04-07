@@ -80,6 +80,21 @@ const Image: React.FC<SvgProps> = ({ display, fill, height, title = 'Image', wid
   </Icon>
 )
 
+const Octagon: React.FC<SvgProps> = ({ display, fill, height, title = 'Image', width }) => (
+  <Icon display={display} fill={fill} height={height} title={title} viewBox="0 0 256 256" width={width}>
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path fill="none" stroke={fill} strokeLinecap="round" strokeLinejoin="round" strokeWidth="16" d="M128 80v56" />
+    <path
+      d="M164.5 32h-73a7.9 7.9 0 0 0-5.6 2.3L34.3 85.9a7.9 7.9 0 0 0-2.3 5.6v73a7.9 7.9 0 0 0 2.3 5.6l51.6 51.6a7.9 7.9 0 0 0 5.6 2.3h73a7.9 7.9 0 0 0 5.6-2.3l51.6-51.6a7.9 7.9 0 0 0 2.3-5.6v-73a7.9 7.9 0 0 0-2.3-5.6l-51.6-51.6a7.9 7.9 0 0 0-5.6-2.3Z"
+      fill="none"
+      stroke={fill}
+      strokeMiterlimit="10"
+      strokeWidth="16"
+    />
+    <circle cx="128" cy="172" r="12" />
+  </Icon>
+)
+
 const Star: React.FC<SvgProps> = ({ display, fill, height, title = 'Star', width }) => (
   <Icon display={display} fill={fill} height={height} title={title} viewBox="0 0 28 28" width={width}>
     <path
@@ -93,6 +108,7 @@ const Icons = {
   ArrowLeft,
   ArrowRight,
   Image,
+  Octagon,
   Star,
 }
 

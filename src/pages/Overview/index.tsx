@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { FetchParams, MotionPicture, Season } from '../../lib/types'
 import { Container, Wrapper } from './index.style'
-import { Heading } from '../../components'
-import { MovieDetails, MovieSelect } from '../../screens'
+import { ErrorScreen, MovieDetails, MovieSelect } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
 
 const Overview: React.FC = () => {
@@ -14,7 +13,7 @@ const Overview: React.FC = () => {
     season: 1,
   })
 
-  const motionPicture = useFetch<MotionPicture>('', { t: 'mandalorian', plot: 'full' })
+  const showDescription = useFetch<MotionPicture>('', { t: 'mandalorian', plot: 'full' })
 
   const { data, error, refetch, updateUrl } = useFetch<Season>('/', fetchParams)
 
@@ -39,20 +38,22 @@ const Overview: React.FC = () => {
     setFetchParams(newParams)
   }
 
+  if (error || showDescription.error) {
+    return (
+      <Wrapper>
+        <ErrorScreen message="Oh no! Something happened, please try again later." />
+      </Wrapper>
+    )
+  }
+
   return (
     <Wrapper>
-      {error && (
-        <Container>
-          <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>
-        </Container>
-      )}
-
-      {data && motionPicture.data && (
+      {data && showDescription.data && (
         <Container>
           <MovieSelect
             episodes={data.Episodes}
             title={data.Title}
-            description={motionPicture.data.Plot}
+            description={showDescription.data.Plot}
             totalSeasons={totalSeasons}
             onSelect={handleSelect}
             onClick={handleClick}

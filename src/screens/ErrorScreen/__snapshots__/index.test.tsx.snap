@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error screen renders correctly 1`] = `
+<div
+  className="sc-bczRLJ bYsXgd"
+>
+  <svg
+    style={
+      Object {
+        "display": "block",
+        "fill": "#979797",
+        "height": 40,
+        "lineHeight": 1,
+        "verticalAlign": "middle",
+        "width": 40,
+      }
+    }
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      error
+    </title>
+    <path
+      d="M0 0h256v256H0z"
+      fill="none"
+    />
+    <path
+      d="M128 80v56"
+      fill="none"
+      stroke="#979797"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+    />
+    <path
+      d="M164.5 32h-73a7.9 7.9 0 0 0-5.6 2.3L34.3 85.9a7.9 7.9 0 0 0-2.3 5.6v73a7.9 7.9 0 0 0 2.3 5.6l51.6 51.6a7.9 7.9 0 0 0 5.6 2.3h73a7.9 7.9 0 0 0 5.6-2.3l51.6-51.6a7.9 7.9 0 0 0 2.3-5.6v-73a7.9 7.9 0 0 0-2.3-5.6l-51.6-51.6a7.9 7.9 0 0 0-5.6-2.3Z"
+      fill="none"
+      stroke="#979797"
+      strokeMiterlimit="10"
+      strokeWidth="16"
+    />
+    <circle
+      cx="128"
+      cy="172"
+      r="12"
+    />
+  </svg>
+  <h4
+    className="sc-jSMfEi cdJvnL"
+  >
+    Oh no! Something happened...
+  </h4>
+</div>
+`;
+
+exports[`Error screen renders correctly with prop message 1`] = `
+<div
+  className="sc-bczRLJ bYsXgd"
+>
+  <svg
+    style={
+      Object {
+        "display": "block",
+        "fill": "#979797",
+        "height": 40,
+        "lineHeight": 1,
+        "verticalAlign": "middle",
+        "width": 40,
+      }
+    }
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      error
+    </title>
+    <path
+      d="M0 0h256v256H0z"
+      fill="none"
+    />
+    <path
+      d="M128 80v56"
+      fill="none"
+      stroke="#979797"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+    />
+    <path
+      d="M164.5 32h-73a7.9 7.9 0 0 0-5.6 2.3L34.3 85.9a7.9 7.9 0 0 0-2.3 5.6v73a7.9 7.9 0 0 0 2.3 5.6l51.6 51.6a7.9 7.9 0 0 0 5.6 2.3h73a7.9 7.9 0 0 0 5.6-2.3l51.6-51.6a7.9 7.9 0 0 0 2.3-5.6v-73a7.9 7.9 0 0 0-2.3-5.6l-51.6-51.6a7.9 7.9 0 0 0-5.6-2.3Z"
+      fill="none"
+      stroke="#979797"
+      strokeMiterlimit="10"
+      strokeWidth="16"
+    />
+    <circle
+      cx="128"
+      cy="172"
+      r="12"
+    />
+  </svg>
+  <h4
+    className="sc-jSMfEi cdJvnL"
+  >
+    Oh no!
+  </h4>
+</div>
+`;

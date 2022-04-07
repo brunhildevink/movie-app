@@ -95,6 +95,51 @@ exports[`Icon component test Image Icon renders correctly 1`] = `
 </svg>
 `;
 
+exports[`Icon component test Octagon Icon renders correctly 1`] = `
+<svg
+  style={
+    Object {
+      "display": "inline",
+      "fill": "#efd358",
+      "height": 24,
+      "lineHeight": 1,
+      "verticalAlign": "middle",
+      "width": 24,
+    }
+  }
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    rating
+  </title>
+  <path
+    d="M0 0h256v256H0z"
+    fill="none"
+  />
+  <path
+    d="M128 80v56"
+    fill="none"
+    stroke="#efd358"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="16"
+  />
+  <path
+    d="M164.5 32h-73a7.9 7.9 0 0 0-5.6 2.3L34.3 85.9a7.9 7.9 0 0 0-2.3 5.6v73a7.9 7.9 0 0 0 2.3 5.6l51.6 51.6a7.9 7.9 0 0 0 5.6 2.3h73a7.9 7.9 0 0 0 5.6-2.3l51.6-51.6a7.9 7.9 0 0 0 2.3-5.6v-73a7.9 7.9 0 0 0-2.3-5.6l-51.6-51.6a7.9 7.9 0 0 0-5.6-2.3Z"
+    fill="none"
+    stroke="#efd358"
+    strokeMiterlimit="10"
+    strokeWidth="16"
+  />
+  <circle
+    cx="128"
+    cy="172"
+    r="12"
+  />
+</svg>
+`;
+
 exports[`Icon component test Star Icon renders correctly 1`] = `
 <svg
   style={
