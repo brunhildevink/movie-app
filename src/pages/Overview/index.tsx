@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
-import { FetchParams, MotionPicture, Season } from '../../lib/types'
+import { FetchParams, MotionPicture, Season, EpisodeDetailed } from '../../lib/types'
 import { Container, Wrapper } from './index.style'
 import { ErrorScreen, MovieDetails, MovieSelect } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
 
 const Overview: React.FC = () => {
-  const [selectedEpisode, setSelectedEpisode] = useState<string>('')
+  const [selectedEpisode, setSelectedEpisode] = useState<EpisodeDetailed>()
+
   const [fetchParams, setFetchParams] = useState<FetchParams>({
     t: 'mandalorian',
     plot: 'full',
@@ -20,22 +21,22 @@ const Overview: React.FC = () => {
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 
   useEffect(() => {
-    if (data && data.Episodes) setSelectedEpisode(data.Episodes[0].imdbID)
-  }, [data])
-
-  useEffect(() => {
     updateUrl(formatUrl('/', fetchParams))
     refetch()
   }, [fetchParams])
 
-  const handleClick = (id: string) => {
-    setSelectedEpisode(id)
+  const handleClick = (episode: EpisodeDetailed) => {
+    setSelectedEpisode(episode)
   }
 
   const handleSelect = (currentSeason: number) => {
     const newParams: FetchParams = { ...fetchParams }
     newParams.season = currentSeason
     setFetchParams(newParams)
+  }
+
+  const handleReturnEpisode = (episode: EpisodeDetailed) => {
+    setSelectedEpisode(episode)
   }
 
   if (error || showDescription.error) {
@@ -57,8 +58,9 @@ const Overview: React.FC = () => {
             totalSeasons={totalSeasons}
             onSelect={handleSelect}
             onClick={handleClick}
+            returnFirstEpisode={handleReturnEpisode}
           />
-          <MovieDetails key={selectedEpisode} id={selectedEpisode} />
+          {selectedEpisode && <MovieDetails data={selectedEpisode} />}
         </Container>
       )}
     </Wrapper>

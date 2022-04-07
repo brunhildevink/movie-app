@@ -5,7 +5,7 @@ import { ButtonContainer, Container, EpisodeSelection, Select, Wrapper } from '.
 import image from '../../assets/images/1.1.jpg'
 import { Button, Heading } from '../../components'
 import Card from '../../components/Card'
-import { Episode } from '../../lib/types'
+import { Episode, EpisodeDetailed } from '../../lib/types'
 import 'swiper/swiper-bundle.css'
 
 interface Props {
@@ -14,10 +14,19 @@ interface Props {
   title: string
   totalSeasons: number
   onSelect: (season: number) => void
-  onClick: (id: string) => void
+  onClick: (episode: EpisodeDetailed) => void
+  returnFirstEpisode: (episode: EpisodeDetailed) => void
 }
 
-const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeasons, onSelect, onClick }) => {
+const MovieSelect: React.FC<Props> = ({
+  episodes,
+  description,
+  title,
+  totalSeasons,
+  onSelect,
+  onClick,
+  returnFirstEpisode,
+}) => {
   SwiperCore.use([Navigation, EffectCoverflow, Keyboard])
 
   const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
@@ -26,9 +35,9 @@ const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeaso
     </option>
   ))
 
-  const renderCards = episodes.map((episode) => (
+  const renderCards = episodes.map((episode, index) => (
     <SwiperSlide key={episode.imdbID}>
-      <Card id={episode.imdbID} onClick={onClick} />
+      <Card id={episode.imdbID} onClick={onClick} returnFirstEpisode={(e) => index === 0 && returnFirstEpisode(e)} />
     </SwiperSlide>
   ))
 

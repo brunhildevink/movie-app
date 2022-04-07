@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { Description, EpisodeNumber, Image, NotFound, Title, Wrapper } from './index.style'
 import { EpisodeDetailed } from '../../lib/types'
@@ -9,11 +9,16 @@ import Icon from '../Icon'
 
 interface Props {
   id: string
-  onClick: (id: string) => void
+  onClick: (episode: EpisodeDetailed) => void
+  returnFirstEpisode?: (episode: EpisodeDetailed) => void
 }
 
-const Card: React.FC<Props> = ({ id, onClick }) => {
+const Card: React.FC<Props> = ({ id, onClick, returnFirstEpisode }) => {
   const { data, loading } = useFetch<EpisodeDetailed>('/', { i: id })
+
+  useEffect(() => {
+    if (data && returnFirstEpisode) returnFirstEpisode(data)
+  }, [data])
 
   if (loading) {
     return (
@@ -29,7 +34,7 @@ const Card: React.FC<Props> = ({ id, onClick }) => {
   return (
     <div>
       {data && (
-        <Wrapper onClick={() => onClick(id)}>
+        <Wrapper onClick={() => onClick(data)}>
           {data.Poster !== 'N/A' ? (
             <Image img={data.Poster} />
           ) : (
@@ -50,6 +55,10 @@ const Card: React.FC<Props> = ({ id, onClick }) => {
       )}
     </div>
   )
+}
+
+Card.defaultProps = {
+  returnFirstEpisode: () => null,
 }
 
 export default Card

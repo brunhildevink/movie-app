@@ -64,6 +64,7 @@ test('MovieSelect renders correctly', () => {
         title="Hello"
         totalSeasons={8}
         onSelect={() => null}
+        returnFirstEpisode={() => null}
       />,
     )
     .toJSON()
