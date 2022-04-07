@@ -1,5 +1,5 @@
 import React from 'react'
-import { EpisodeInformation, Image, NotFound, Rating, TitleInformation, Wrapper } from './MovieDetails.styles'
+import { EpisodeInformation, Image, NotFound, Rating, TitleInformation, Wrapper } from './index.styles'
 import { Heading, Icon, Skeleton, Text } from '../../components'
 import { colors } from '../../styles'
 import { EpisodeDetailed } from '../../lib/types'

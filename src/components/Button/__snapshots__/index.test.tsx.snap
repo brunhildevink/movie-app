@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Next renders correctly 1`] = `
+<button
+  className="sc-bczRLJ epWIDt"
+  id=""
+>
+  <svg
+    style={
+      Object {
+        "display": "inline",
+        "fill": "#ffffff",
+        "height": 24,
+        "lineHeight": 1,
+        "verticalAlign": "middle",
+        "width": 32,
+      }
+    }
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      previous
+    </title>
+    <path
+      d="M0 0h256v256H0z"
+      fill="none"
+    />
+    <path
+      d="M40 128h176M144 56l72 72-72 72"
+      fill="none"
+      stroke="#ffffff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Button Prev renders correctly 1`] = `
+<button
+  className="sc-bczRLJ epWIDt"
+  id=""
+>
+  <svg
+    style={
+      Object {
+        "display": "inline",
+        "fill": "#ffffff",
+        "height": 24,
+        "lineHeight": 1,
+        "verticalAlign": "middle",
+        "width": 32,
+      }
+    }
+    viewBox="0 0 256 256"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      previous
+    </title>
+    <path
+      d="M0 0h256v256H0z"
+      fill="none"
+    />
+    <path
+      d="M216 128H40M112 56l-72 72 72 72"
+      fill="none"
+      stroke="#ffffff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+    />
+  </svg>
+</button>
+`;

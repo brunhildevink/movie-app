@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { FetchParams, MotionPicture, Season } from '../../lib/types'
-import { Container, Wrapper } from './Overview.style'
+import { Container, Wrapper } from './index.style'
 import { Heading } from '../../components'
 import { MovieDetails, MovieSelect } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
@@ -34,10 +34,6 @@ const Overview: React.FC = () => {
     newParams.season = currentSeason
     setFetchParams(newParams)
   }
-
-  useEffect(() => {
-    console.log(selectedEpisode)
-  }, [selectedEpisode])
 
   return (
     <Wrapper>

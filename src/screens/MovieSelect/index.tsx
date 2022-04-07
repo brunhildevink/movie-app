@@ -1,9 +1,9 @@
 import React from 'react'
 import SwiperCore, { Navigation, EffectCoverflow, Keyboard } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Container, EpisodeSelection, Select, Wrapper } from './MovieSelect.styles'
+import { ButtonContainer, Container, EpisodeSelection, Select, Wrapper } from './index.styles'
 import image from '../../assets/images/1.1.jpg'
-import { Heading, Text } from '../../components'
+import { Button, Heading, Text } from '../../components'
 import Card from '../../components/Card'
 import { Episode } from '../../lib/types'
 import 'swiper/swiper-bundle.css'
@@ -47,14 +47,15 @@ const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeaso
           <Text.Regular>{description}</Text.Regular>
         </div>
       </Container>
-
-      {renderCards && (
-        <EpisodeSelection>
-          <Swiper spaceBetween={28} navigation slidesPerView="auto">
-            {renderCards}
-          </Swiper>
-        </EpisodeSelection>
-      )}
+      <EpisodeSelection>
+        <Swiper spaceBetween={28} navigation={{ nextEl: '#swiper-next', prevEl: '#swiper-prev' }} slidesPerView="auto">
+          {renderCards}
+        </Swiper>
+        <ButtonContainer>
+          <Button.Prev id="swiper-prev" />
+          <Button.Next id="swiper-next" />
+        </ButtonContainer>
+      </EpisodeSelection>
     </Wrapper>
   )
 }

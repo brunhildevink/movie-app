@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 import { colors, fonts, typography } from '../../styles'
 
+const ButtonContainer = styled.div`
+  display: flex;
+  align-self: flex-end;
+  margin: 20px 24px;
+`
+
 const EpisodeSelection = styled.div`
   display: flex;
-
-  grid-auto-flow: column;
-  grid-auto-columns: 200px;
-  grid-gap: 0 32px;
-  overflow-x: scroll;
+  flex-direction: column;
+  overflow-x: hidden;
   padding-left: 40px;
 `
 
@@ -41,6 +44,11 @@ const Wrapper = styled.div<{ img: string }>`
   width: 100%;
   grid-template-rows: 60% 40%;
 
+  .swiper-container {
+    display: flex;
+    width: 100%;
+  }
+
   .swiper-wrapper {
     width: 100%;
   }
@@ -51,4 +59,4 @@ const Wrapper = styled.div<{ img: string }>`
   }
 `
 
-export { Container, EpisodeSelection, Select, Wrapper }
+export { ButtonContainer, Container, EpisodeSelection, Select, Wrapper }

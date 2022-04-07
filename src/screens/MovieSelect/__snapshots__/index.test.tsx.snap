@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieSelect renders correctly 1`] = `
+<div
+  className="sc-eCYdqJ bILkjS"
+>
+  <div
+    className="sc-dkzDqf deZvzq"
+  >
+    <div>
+      <select
+        className="sc-hKMtZM cgMObK"
+        disabled={false}
+        onChange={[Function]}
+      >
+        <option
+          value={1}
+        >
+          Season 
+          1
+        </option>
+        <option
+          value={2}
+        >
+          Season 
+          2
+        </option>
+        <option
+          value={3}
+        >
+          Season 
+          3
+        </option>
+        <option
+          value={4}
+        >
+          Season 
+          4
+        </option>
+        <option
+          value={5}
+        >
+          Season 
+          5
+        </option>
+        <option
+          value={6}
+        >
+          Season 
+          6
+        </option>
+        <option
+          value={7}
+        >
+          Season 
+          7
+        </option>
+        <option
+          value={8}
+        >
+          Season 
+          8
+        </option>
+      </select>
+      <h1
+        className="sc-gKXOVf kYvzuK"
+      >
+        Hello
+      </h1>
+      <p
+        className="sc-evZas gphoUw"
+      >
+        hllo
+      </p>
+    </div>
+  </div>
+  <div
+    className="sc-gsnTZi bchrOq"
+  >
+    <div
+      className="swiper-container"
+    >
+      <div
+        className="swiper-wrapper"
+      >
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bczRLJ kfYiql"
+    >
+      <button
+        className="sc-jSMfEi dAWaWM"
+        id="swiper-prev"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+              "fill": "#ffffff",
+              "height": 24,
+              "lineHeight": 1,
+              "verticalAlign": "middle",
+              "width": 32,
+            }
+          }
+          viewBox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            previous
+          </title>
+          <path
+            d="M0 0h256v256H0z"
+            fill="none"
+          />
+          <path
+            d="M216 128H40M112 56l-72 72 72 72"
+            fill="none"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-jSMfEi dAWaWM"
+        id="swiper-next"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+              "fill": "#ffffff",
+              "height": 24,
+              "lineHeight": 1,
+              "verticalAlign": "middle",
+              "width": 32,
+            }
+          }
+          viewBox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            previous
+          </title>
+          <path
+            d="M0 0h256v256H0z"
+            fill="none"
+          />
+          <path
+            d="M40 128h176M144 56l72 72-72 72"
+            fill="none"
+            stroke="#ffffff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ export interface SvgProps {
 }
 
 export interface Props extends SvgProps {
-  children: JSX.Element
+  children: JSX.Element | JSX.Element[]
   viewBox: string
 }
 
@@ -39,6 +39,34 @@ const Icon: React.FC<Props> = ({
   )
 }
 
+const ArrowLeft: React.FC<SvgProps> = ({ display, fill, height, title = 'Arrow Left', width }) => (
+  <Icon display={display} fill={fill} height={height} title={title} viewBox="0 0 256 256" width={width}>
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path
+      fill="none"
+      stroke={fill}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+      d="M216 128H40M112 56l-72 72 72 72"
+    />
+  </Icon>
+)
+
+const ArrowRight: React.FC<SvgProps> = ({ display, fill, height, title = 'Arrow Left', width }) => (
+  <Icon display={display} fill={fill} height={height} title={title} viewBox="0 0 256 256" width={width}>
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path
+      fill="none"
+      stroke={fill}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
+      d="M40 128h176M144 56l72 72-72 72"
+    />
+  </Icon>
+)
+
 const Image: React.FC<SvgProps> = ({ display, fill, height, title = 'Image', width }) => (
   <Icon display={display} fill={fill} height={height} title={title} viewBox="0 0 115.19 123.38" width={width}>
     <path
@@ -62,6 +90,8 @@ const Star: React.FC<SvgProps> = ({ display, fill, height, title = 'Star', width
 )
 
 const Icons = {
+  ArrowLeft,
+  ArrowRight,
   Image,
   Star,
 }

@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Icon component test Arrow Left Icon renders correctly 1`] = `
+<svg
+  style={
+    Object {
+      "display": "inline",
+      "fill": "#efd358",
+      "height": 24,
+      "lineHeight": 1,
+      "verticalAlign": "middle",
+      "width": 24,
+    }
+  }
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    rating
+  </title>
+  <path
+    d="M0 0h256v256H0z"
+    fill="none"
+  />
+  <path
+    d="M216 128H40M112 56l-72 72 72 72"
+    fill="none"
+    stroke="#efd358"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="16"
+  />
+</svg>
+`;
+
+exports[`Icon component test Arrow Right Icon renders correctly 1`] = `
+<svg
+  style={
+    Object {
+      "display": "inline",
+      "fill": "#efd358",
+      "height": 24,
+      "lineHeight": 1,
+      "verticalAlign": "middle",
+      "width": 24,
+    }
+  }
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    rating
+  </title>
+  <path
+    d="M0 0h256v256H0z"
+    fill="none"
+  />
+  <path
+    d="M40 128h176M144 56l72 72-72 72"
+    fill="none"
+    stroke="#efd358"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="16"
+  />
+</svg>
+`;
+
 exports[`Icon component test Image Icon renders correctly 1`] = `
 <svg
   style={
