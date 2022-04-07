@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, typography } from '../../styles'
+import { breakpoints, colors, typography } from '../../styles'
 
 const Description = styled.div`
   overflow: hidden;
@@ -32,7 +32,7 @@ const Image = styled.div<{ img?: string }>`
   background: ${({ img }) => (img ? `url(${img}) center center no-repeat` : `${colors.white}`)};
   background-size: cover;
   height: 136px;
-  width: 200px;
+  width: 100%;
 `
 
 const NotFound = styled.div`
@@ -58,7 +58,6 @@ const Title = styled.div`
 `
 
 const Wrapper = styled.button`
-  width: 200px;
   position: relative;
   border: 0;
   padding: 0;
@@ -66,6 +65,10 @@ const Wrapper = styled.button`
   text-align: start;
   color: ${colors.white};
   cursor: pointer;
+
+  @media ${breakpoints.md} {
+    width: 200px;
+  }
 `
 
 export { Description, EpisodeNumber, Image, NotFound, Title, Wrapper }

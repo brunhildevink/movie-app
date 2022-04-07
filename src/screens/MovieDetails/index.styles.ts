@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, typography } from '../../styles'
+import { breakpoints, colors, typography } from '../../styles'
 
 const EpisodeInformation = styled.div`
   display: flex;
@@ -12,8 +12,14 @@ const EpisodeInformation = styled.div`
 const Image = styled.div<{ img: string }>`
   background: ${({ img }) => `url(${img})`} center center no-repeat;
   background-size: cover;
-  height: 100%;
   width: 100%;
+  height: 200px;
+  grid-area: image;
+
+  @media ${breakpoints.lg} {
+    grid-area: unset;
+    height: 100%;
+  }
 `
 
 const NotFound = styled.div`
@@ -32,6 +38,7 @@ const NotFound = styled.div`
 const Rating = styled.div`
   display: flex;
   align-items: center;
+  grid-area: rating;
 
   svg {
     margin-right: 16px;
@@ -45,6 +52,7 @@ const Rating = styled.div`
 const TitleInformation = styled.div`
   padding: 40px;
   overflow-y: auto;
+  grid-area: title;
 
   p {
     font-size: ${typography.fontSizeTextLarge}px;
@@ -55,8 +63,20 @@ const TitleInformation = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: grid;
-  grid-template-rows: 60% 15% 25%;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    'rating'
+    'title'
+    'image';
+
+  @media ${breakpoints.lg} {
+    grid-template-areas:
+      'image'
+      'rating'
+      'title';
+
+    grid-template-rows: 60% 15% 25%;
+  }
 `
 
 export { EpisodeInformation, Image, NotFound, Rating, TitleInformation, Wrapper }

@@ -3,10 +3,10 @@
 exports[`MovieDetails renders correctly 1`] = `
 <div>
   <div
-    className="sc-jSMfEi ftJDZZ"
+    className="sc-jSMfEi fqngSB"
   >
     <div
-      className="sc-gsnTZi dzFGqA"
+      className="sc-gsnTZi deCMci"
     />
     <div
       className="sc-bczRLJ cRUVyz"
@@ -20,7 +20,7 @@ exports[`MovieDetails renders correctly 1`] = `
         12 Nov 2019
       </h4>
       <div
-        className="sc-hKMtZM gTjlau"
+        className="sc-hKMtZM bdkOKA"
       >
         <svg
           style={
@@ -55,7 +55,7 @@ exports[`MovieDetails renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-eCYdqJ jMAMxq"
+      className="sc-eCYdqJ kihKeL"
     >
       <h2
         className="sc-ftvSup hQoIXH"

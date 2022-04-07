@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts, typography } from '../../styles'
+import { breakpoints, colors, fonts, typography } from '../../styles'
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -34,16 +34,20 @@ const Select = styled.select`
 `
 
 const Wrapper = styled.div<{ img: string }>`
+  position: relative;
   display: inline-grid;
   color: ${colors.white};
   height: 100%;
-  background: linear-gradient(236deg, rgba(31, 0, 19, 0.444437149859944) 0%, rgba(215, 0, 133, 0.217546393557423) 100%),
-    ${({ img }) => `url(${img})`} no-repeat center center;
-  background-blend-mode: screen;
+  background: ${colors.white};
+  background: linear-gradient(236deg, rgba(187, 0, 115, 0.5) 0%, rgba(0, 51, 134, 0.5)), ${({ img }) => `url(${img})`};
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  grid-template-rows: 60% 40%;
+
+  @media ${breakpoints.lg} {
+    grid-template-rows: 60% 40%;
+  }
 
   .swiper-container {
     display: flex;
@@ -56,7 +60,14 @@ const Wrapper = styled.div<{ img: string }>`
 
   .swiper-slide {
     display: block;
-    width: 200px;
+    width: 100%;
+  }
+
+  @media ${breakpoints.md} {
+    .swiper-slide {
+      display: block;
+      width: 200px !important;
+    }
   }
 `
 

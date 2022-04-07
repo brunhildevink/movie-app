@@ -61,7 +61,21 @@ const MovieSelect: React.FC<Props> = ({
           initialSlide={0}
           spaceBetween={28}
           navigation={{ nextEl: '#swiper-next', prevEl: '#swiper-prev' }}
-          slidesPerView="auto"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 'auto',
+              spaceBetween: 24,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 'auto',
+              spaceBetween: 28,
+            },
+          }}
         >
           {renderCards}
         </Swiper>
