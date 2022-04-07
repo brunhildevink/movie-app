@@ -14,9 +14,9 @@ const Overview: React.FC = () => {
     season: 1,
   })
 
-  const showDescription = useFetch<MotionPicture>('', { t: 'mandalorian', plot: 'full' })
+  const showDescription = useFetch<MotionPicture, FetchParams>('', { t: 'mandalorian', plot: 'full' })
 
-  const { data, error, refetch, updateUrl } = useFetch<Season>('/', fetchParams)
+  const { data, error, refetch, updateUrl } = useFetch<Season, FetchParams>('/', fetchParams)
 
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 

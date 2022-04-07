@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { Description, EpisodeNumber, Image, NotFound, Title, Wrapper } from './index.style'
-import { EpisodeDetailed } from '../../lib/types'
+import { EpisodeDetailed, FetchParams } from '../../lib/types'
 import { colors } from '../../styles'
 import Skeleton from '../Skeleton'
 import Text from '../Text'
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const Card: React.FC<Props> = ({ id, onClick, returnFirstEpisode }) => {
-  const { data, loading } = useFetch<EpisodeDetailed>('/', { i: id })
+  const { data, loading } = useFetch<EpisodeDetailed, FetchParams>('/', { i: id })
 
   useEffect(() => {
     if (data && returnFirstEpisode) returnFirstEpisode(data)

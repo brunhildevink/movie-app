@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react'
 import formatUrl from '../utils/helpers/formatUrl'
 
-interface Params {
-  [key: string]: any
-}
-
 interface State<T> {
   data?: T
   error?: Error
@@ -13,7 +9,7 @@ interface State<T> {
   updateUrl: React.Dispatch<React.SetStateAction<string>>
 }
 
-const useFetch = <T,>(path: string, params: Params): State<T> => {
+const useFetch = <T, P>(path: string, params: P): State<T> => {
   const [url, updateUrl] = useState(formatUrl(path, params))
   const [data, setData] = useState<T>()
   const [loading, setLoading] = useState<boolean>(false)
