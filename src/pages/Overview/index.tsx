@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
-import { FetchParams, MotionPicture } from '../../lib/types'
-import { App, AppHeader } from './Overview.style'
-import { Heading } from '../../components'
+import { FetchParams, MotionPicture, Season, EpisodeDetailed } from '../../lib/types'
+import { Container, Wrapper } from './index.style'
+import { ErrorScreen, MovieDetails, MovieSelect } from '../../screens'
 import formatUrl from '../../utils/helpers/formatUrl'
 
-const Header: React.FC = () => {
+const Overview: React.FC = () => {
+  const [selectedEpisode, setSelectedEpisode] = useState<EpisodeDetailed>()
+
   const [fetchParams, setFetchParams] = useState<FetchParams>({
     t: 'mandalorian',
     plot: 'full',
     season: 1,
   })
 
-  const { data, error, loading, refetch, updateUrl } = useFetch<MotionPicture>('/', fetchParams)
+  const showDescription = useFetch<MotionPicture>('', { t: 'mandalorian', plot: 'full' })
+
+  const { data, error, refetch, updateUrl } = useFetch<Season>('/', fetchParams)
 
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 
@@ -21,41 +25,46 @@ const Header: React.FC = () => {
     refetch()
   }, [fetchParams])
 
-  useEffect(() => {
-    console.log(data)
-  }, [data])
+  const handleClick = (episode: EpisodeDetailed) => {
+    setSelectedEpisode(episode)
+  }
 
-  const handleChange = (currentSeason: number) => {
+  const handleSelect = (currentSeason: number) => {
     const newParams: FetchParams = { ...fetchParams }
     newParams.season = currentSeason
     setFetchParams(newParams)
   }
 
-  const renderSelectSeasons = Array.from(Array(totalSeasons).keys()).map((num) => (
-    <option key={num} value={num + 1}>
-      Season {num + 1}
-    </option>
-  ))
+  const handleReturnEpisode = (episode: EpisodeDetailed) => {
+    setSelectedEpisode(episode)
+  }
+
+  if (error || showDescription.error) {
+    return (
+      <Wrapper>
+        <ErrorScreen message="Oh no! Something happened, please try again later." />
+      </Wrapper>
+    )
+  }
 
   return (
-    <App>
-      <AppHeader>
-        {loading && <Heading.HeadingFour>Loading...</Heading.HeadingFour>}
-
-        {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
-
-        {data && (
-          <select
-            disabled={!(totalSeasons > 0)}
-            key={totalSeasons}
-            onChange={(event) => handleChange(parseInt(event.target.value, 10))}
-          >
-            {renderSelectSeasons}
-          </select>
-        )}
-      </AppHeader>
-    </App>
+    <Wrapper>
+      {data && showDescription.data && (
+        <Container>
+          <MovieSelect
+            episodes={data.Episodes}
+            title={data.Title}
+            description={showDescription.data.Plot}
+            totalSeasons={totalSeasons}
+            onSelect={handleSelect}
+            onClick={handleClick}
+            returnFirstEpisode={handleReturnEpisode}
+          />
+          {selectedEpisode && <MovieDetails data={selectedEpisode} />}
+        </Container>
+      )}
+    </Wrapper>
   )
 }
 
-export default Header
+export default Overview

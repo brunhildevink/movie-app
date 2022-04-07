@@ -31,6 +31,7 @@ const HeadingTwo = styled.h2`
   font-size: ${typography.fontSizeHeadingTwoMobile}px;
   line-height: ${typography.lineHeightHeadingTwoMobile};
   font-weight: ${typography.fontWeightBold};
+  margin-bottom: 6px;
 
   @media ${breakpoints.md} {
     font-size: ${typography.fontSizeHeadingTwo}px;
@@ -43,7 +44,7 @@ const HeadingTwo = styled.h2`
 const HeadingThree = styled.h3`
   font-size: ${typography.fontSizeHeadingThreeMobile}px;
   line-height: ${typography.lineHeightHeadingThreeMobile};
-  font-weight: ${typography.fontWeightBold};
+  font-weight: ${typography.fontWeightRegular};
 
   @media ${breakpoints.md} {
     font-size: ${typography.fontSizeHeadingThree}px;
@@ -56,7 +57,7 @@ const HeadingThree = styled.h3`
 const HeadingFour = styled.h4`
   font-size: ${typography.fontSizeHeadingFourMobile}px;
   line-height: ${typography.lineHeightHeadingFourMobile};
-  font-weight: ${typography.fontWeightBold};
+  font-weight: ${typography.fontWeightRegular};
 
   @media ${breakpoints.md} {
     font-size: ${typography.fontSizeHeadingFour}px;

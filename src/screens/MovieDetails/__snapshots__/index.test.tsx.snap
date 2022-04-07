@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetails renders correctly 1`] = `
+<div>
+  <div
+    className="sc-jSMfEi fqngSB"
+  >
+    <div
+      className="sc-gsnTZi deCMci"
+    />
+    <div
+      className="sc-bczRLJ cRUVyz"
+    >
+      <h4
+        className="sc-jqUVSM eYxZeH"
+      >
+        Episode 
+        1
+         — 
+        12 Nov 2019
+      </h4>
+      <div
+        className="sc-hKMtZM bdkOKA"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+              "fill": "#efd358",
+              "height": 24,
+              "lineHeight": 1,
+              "verticalAlign": "middle",
+              "width": 24,
+            }
+          }
+          viewBox="0 0 28 28"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            rating
+          </title>
+          <path
+            d="m14 .692 4.324 8.761 9.668 1.406-6.996 6.819 1.651 9.63L14 22.76l-8.647 4.547 1.65-9.63-6.995-6.82 9.668-1.405L14 .693Z"
+            fill="#efd358"
+          />
+        </svg>
+        <h4
+          className="sc-jqUVSM eYxZeH"
+        >
+          <span>
+            8.6
+          </span>
+          /10
+        </h4>
+      </div>
+    </div>
+    <div
+      className="sc-eCYdqJ kihKeL"
+    >
+      <h2
+        className="sc-ftvSup hQoIXH"
+      >
+        Chapter 1: The Mandalorian
+      </h2>
+      <p
+        className="sc-breuTD ejufZI"
+      >
+        A Mandalorian bounty hunter tracks a target for a well-paying, mysterious client.
+      </p>
+    </div>
+  </div>
+</div>
+`;

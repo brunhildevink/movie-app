@@ -1,14 +1,16 @@
-const fontSizeHeadingOne = 70
-const fontSizeHeadingTwo = 30
-const fontSizeHeadingThree = 25
-const fontSizeHeadingFour = 20
+const fontSizeHeadingOne = 74
+const fontSizeHeadingTwo = 27
+const fontSizeHeadingThree = 23
+const fontSizeHeadingFour = 18
 
 const fontSizeHeadingOneMobile = 42
 const fontSizeHeadingTwoMobile = 24
 const fontSizeHeadingThreeMobile = 20
 const fontSizeHeadingFourMobile = 18
 
-const fontSizeText = 16
+const fontSizeTextLarge = 18
+const fontSizeTextMedium = 16
+const fontSizeText = 13
 const fontSizeButton = 14
 const fontSizeLabel = 12
 
@@ -26,23 +28,24 @@ const typography = {
   fontSizeHeadingTwoMobile,
   fontSizeHeadingThreeMobile,
   fontSizeHeadingFourMobile,
+  fontSizeTextLarge,
+  fontSizeTextMedium,
   fontSizeText,
   fontSizeButton,
   fontSizeLabel,
-  lineHeightHeadingOne: '82px',
+  lineHeightHeadingOne: '87px',
   lineHeightHeadingTwoSpecial: '50px',
-  lineHeightHeadingTwo: '40px',
-  lineHeightHeadingThree: '36px',
-  lineHeightHeadingFour: '28px',
+  lineHeightHeadingTwo: '32px',
+  lineHeightHeadingThree: '27px',
+  lineHeightHeadingFour: '23px',
   lineHeightHeadingOneMobile: '50px',
   lineHeightHeadingTwoSpecialMobile: '40px',
   lineHeightHeadingTwoMobile: '30px',
   lineHeightHeadingThreeMobile: '28px',
   lineHeightHeadingFourMobile: '28px',
-  lineHeightTextLarge: '30px',
-  lineHeightText: '28px',
-  lineHeightTextSmall: '22px',
-  lineHeightTextXSmall: '18px',
+  lineHeightTextLarge: '23px',
+  lineHeightTextMedium: '18px',
+  lineHeightText: '15px',
 }
 
 export default typography
