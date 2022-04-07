@@ -2,24 +2,24 @@
 
 exports[`Heading one renders correctly 1`] = `
 <h1
-  className="sc-bczRLJ jfxyhu"
+  className="sc-bczRLJ deAUVv"
 />
 `;
 
 exports[`Heading three renders correctly 1`] = `
 <h3
-  className="sc-dkzDqf dEtffT"
+  className="sc-dkzDqf wwXug"
 />
 `;
 
 exports[`Heading three renders correctly 2`] = `
 <h4
-  className="sc-hKMtZM cIETIP"
+  className="sc-hKMtZM hcItAY"
 />
 `;
 
 exports[`Heading two renders correctly 1`] = `
 <h2
-  className="sc-gsnTZi jUbKMy"
+  className="sc-gsnTZi gzrcMI"
 />
 `;

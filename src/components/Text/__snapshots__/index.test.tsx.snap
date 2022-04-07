@@ -2,24 +2,24 @@
 
 exports[`Text bold renders correctly 1`] = `
 <p
-  className="sc-bczRLJ jzQJTL"
+  className="sc-bczRLJ YRWNg"
 />
 `;
 
 exports[`Text light renders correctly 1`] = `
 <p
-  className="sc-gsnTZi kRNTBJ"
+  className="sc-gsnTZi bMDWaK"
 />
 `;
 
 exports[`Text medium renders correctly 1`] = `
 <p
-  className="sc-dkzDqf jpQXfE"
+  className="sc-dkzDqf cnoQUb"
 />
 `;
 
 exports[`Text regular renders correctly 1`] = `
 <p
-  className="sc-hKMtZM AqaKO"
+  className="sc-hKMtZM xSPEl"
 />
 `;

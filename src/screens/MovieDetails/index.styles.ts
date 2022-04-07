@@ -45,6 +45,11 @@ const Rating = styled.div`
 const TitleInformation = styled.div`
   padding: 40px;
   overflow-y: auto;
+
+  p {
+    font-size: ${typography.fontSizeTextLarge}px;
+    line-height: ${typography.lineHeightTextLarge};
+  }
 `
 
 const Wrapper = styled.div`

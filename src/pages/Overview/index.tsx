@@ -21,6 +21,10 @@ const Overview: React.FC = () => {
   const totalSeasons = data ? parseInt(data.totalSeasons, 10) : 0
 
   useEffect(() => {
+    if (data && data.Episodes) setSelectedEpisode(data.Episodes[0].imdbID)
+  }, [data])
+
+  useEffect(() => {
     updateUrl(formatUrl('/', fetchParams))
     refetch()
   }, [fetchParams])
@@ -37,7 +41,11 @@ const Overview: React.FC = () => {
 
   return (
     <Wrapper>
-      {error && <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>}
+      {error && (
+        <Container>
+          <Heading.HeadingFour>Oh no, something happened...</Heading.HeadingFour>
+        </Container>
+      )}
 
       {data && motionPicture.data && (
         <Container>

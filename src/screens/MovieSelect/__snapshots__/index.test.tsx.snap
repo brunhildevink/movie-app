@@ -9,7 +9,7 @@ exports[`MovieSelect renders correctly 1`] = `
   >
     <div>
       <select
-        className="sc-hKMtZM cgMObK"
+        className="sc-hKMtZM hCGejv"
         disabled={false}
         onChange={[Function]}
       >
@@ -63,15 +63,15 @@ exports[`MovieSelect renders correctly 1`] = `
         </option>
       </select>
       <h1
-        className="sc-gKXOVf kYvzuK"
+        className="sc-gKXOVf gudqaf"
       >
         Hello
       </h1>
-      <p
-        className="sc-evZas gphoUw"
+      <h3
+        className="sc-ftvSup dWgAec"
       >
         hllo
-      </p>
+      </h3>
     </div>
   </div>
   <div

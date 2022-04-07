@@ -30,6 +30,7 @@ const Select = styled.select`
   color: ${colors.white};
   border: none;
   font-size: ${typography.fontSizeHeadingThree}px;
+  line-height: ${typography.lineHeightHeadingThree};
 `
 
 const Wrapper = styled.div<{ img: string }>`

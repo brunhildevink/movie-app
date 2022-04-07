@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { colors, typography } from '../../styles'
 
 const Description = styled.div`
   overflow: hidden;
@@ -21,6 +21,11 @@ const EpisodeNumber = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  p {
+    font-size: ${typography.fontSizeTextMedium}px;
+    font-weight: ${typography.fontWeightBold};
+  }
 `
 
 const Image = styled.div<{ img?: string }>`
@@ -40,7 +45,11 @@ const NotFound = styled.div`
 `
 
 const Title = styled.div`
+  margin: 20px 0 8px 0;
+
   p {
+    font-size: ${typography.fontSizeTextMedium}px;
+    line-height: ${typography.lineHeightTextMedium};
     width: 200px;
     white-space: nowrap;
     overflow: hidden;

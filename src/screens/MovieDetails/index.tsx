@@ -57,7 +57,7 @@ const MovieDetails: React.FC<Props> = ({ id }) => {
             </Rating>
           </EpisodeInformation>
           <TitleInformation>
-            <Heading.HeadingThree>{data.Title}</Heading.HeadingThree>
+            <Heading.HeadingTwo>{data.Title}</Heading.HeadingTwo>
             <Text.Regular>{data.Plot}</Text.Regular>
           </TitleInformation>
         </Wrapper>

@@ -3,7 +3,7 @@ import SwiperCore, { Navigation, EffectCoverflow, Keyboard } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { ButtonContainer, Container, EpisodeSelection, Select, Wrapper } from './index.styles'
 import image from '../../assets/images/1.1.jpg'
-import { Button, Heading, Text } from '../../components'
+import { Button, Heading } from '../../components'
 import Card from '../../components/Card'
 import { Episode } from '../../lib/types'
 import 'swiper/swiper-bundle.css'
@@ -44,7 +44,7 @@ const MovieSelect: React.FC<Props> = ({ episodes, description, title, totalSeaso
             {renderSelectSeasons}
           </Select>
           <Heading.HeadingOne>{title}</Heading.HeadingOne>
-          <Text.Regular>{description}</Text.Regular>
+          <Heading.HeadingThree>{description}</Heading.HeadingThree>
         </div>
       </Container>
       <EpisodeSelection>
