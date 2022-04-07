@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { colors, fonts, typography } from '../../styles'
 
 const EpisodeSelection = styled.div`
-  display: grid;
+  display: flex;
+
   grid-auto-flow: column;
   grid-auto-columns: 200px;
   grid-gap: 0 32px;
@@ -39,6 +40,15 @@ const Wrapper = styled.div<{ img: string }>`
   height: 100%;
   width: 100%;
   grid-template-rows: 60% 40%;
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    display: block;
+    width: 200px;
+  }
 `
 
 export { Container, EpisodeSelection, Select, Wrapper }

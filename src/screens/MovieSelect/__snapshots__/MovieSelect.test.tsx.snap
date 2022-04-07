@@ -2,7 +2,7 @@
 
 exports[`MovieSelect renders correctly 1`] = `
 <div
-  className="sc-hKMtZM jXFmfE"
+  className="sc-hKMtZM fZExle"
 >
   <div
     className="sc-gsnTZi BqpBJ"
@@ -75,15 +75,57 @@ exports[`MovieSelect renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bczRLJ hTOvVw"
+    className="sc-bczRLJ gDWKpl"
   >
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    <div
+      className="swiper-container"
+    >
+      <div
+        className="swiper-button-prev"
+      />
+      <div
+        className="swiper-button-next"
+      />
+      <div
+        className="swiper-wrapper"
+      >
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+        <div
+          className="swiper-slide"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
