@@ -11,7 +11,11 @@ const EpisodeSelection = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  padding-left: 40px;
+  padding: 40px;
+
+  @media ${breakpoints.lg} {
+    padding: 0 0 0 40px;
+  }
 `
 
 const Container = styled.div`

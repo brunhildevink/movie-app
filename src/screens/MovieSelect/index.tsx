@@ -62,16 +62,16 @@ const MovieSelect: React.FC<Props> = ({
           spaceBetween={28}
           navigation={{ nextEl: '#swiper-next', prevEl: '#swiper-prev' }}
           breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 480px
             480: {
-              slidesPerView: 'auto',
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+            },
+            640: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
               spaceBetween: 24,
             },
-            // when window width is >= 640px
-            640: {
+            1024: {
               slidesPerView: 'auto',
               spaceBetween: 28,
             },
