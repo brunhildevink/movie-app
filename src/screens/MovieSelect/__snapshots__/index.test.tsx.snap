@@ -121,10 +121,10 @@ exports[`MovieSelect renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="sc-bczRLJ kfYiql"
+      className="sc-bczRLJ bFZkAs"
     >
       <button
-        className="sc-jSMfEi dAWaWM"
+        className="sc-jSMfEi kCZvHO"
         id="swiper-prev"
       >
         <svg
@@ -159,7 +159,7 @@ exports[`MovieSelect renders correctly 1`] = `
         </svg>
       </button>
       <button
-        className="sc-jSMfEi dAWaWM"
+        className="sc-jSMfEi kCZvHO"
         id="swiper-next"
       >
         <svg
