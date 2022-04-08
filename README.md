@@ -1,4 +1,4 @@
-# View the project live [here](https://www.brunhildevink.xyz/)
+## View the project live [here](https://www.brunhildevink.xyz/)
 
 # Getting Started with Create React App
 
