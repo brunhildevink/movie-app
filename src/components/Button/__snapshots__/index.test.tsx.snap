@@ -2,7 +2,7 @@
 
 exports[`Button Next renders correctly 1`] = `
 <button
-  className="sc-bczRLJ epWIDt"
+  className="sc-bczRLJ coIYuT"
   id=""
 >
   <svg
@@ -40,7 +40,7 @@ exports[`Button Next renders correctly 1`] = `
 
 exports[`Button Prev renders correctly 1`] = `
 <button
-  className="sc-bczRLJ epWIDt"
+  className="sc-bczRLJ coIYuT"
   id=""
 >
   <svg

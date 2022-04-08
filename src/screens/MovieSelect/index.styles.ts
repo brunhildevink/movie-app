@@ -4,7 +4,11 @@ import { breakpoints, colors, fonts, typography } from '../../styles'
 const ButtonContainer = styled.div`
   display: flex;
   align-self: flex-end;
-  margin: 20px 24px;
+  margin: 20px 0;
+
+  @media ${breakpoints.lg} {
+    margin: 20px 24px;
+  }
 `
 
 const EpisodeSelection = styled.div`

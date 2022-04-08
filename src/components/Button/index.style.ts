@@ -5,6 +5,7 @@ const Button = styled.button`
   background: transparent;
   cursor: pointer;
   border: none;
+  padding: 0;
 
   &:disabled {
     opacity: 0.5;
