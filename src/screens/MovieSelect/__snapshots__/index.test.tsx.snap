@@ -2,197 +2,201 @@
 
 exports[`MovieSelect renders correctly 1`] = `
 <div
-  className="sc-eCYdqJ hYKdsp"
+  className="sc-jSMfEi jXMBJD"
 >
   <div
-    className="sc-dkzDqf deZvzq"
-  >
-    <div>
-      <select
-        className="sc-hKMtZM hCGejv"
-        disabled={false}
-        onChange={[Function]}
-      >
-        <option
-          value={1}
-        >
-          Season 
-          1
-        </option>
-        <option
-          value={2}
-        >
-          Season 
-          2
-        </option>
-        <option
-          value={3}
-        >
-          Season 
-          3
-        </option>
-        <option
-          value={4}
-        >
-          Season 
-          4
-        </option>
-        <option
-          value={5}
-        >
-          Season 
-          5
-        </option>
-        <option
-          value={6}
-        >
-          Season 
-          6
-        </option>
-        <option
-          value={7}
-        >
-          Season 
-          7
-        </option>
-        <option
-          value={8}
-        >
-          Season 
-          8
-        </option>
-      </select>
-      <h1
-        className="sc-gKXOVf gudqaf"
-      >
-        Hello
-      </h1>
-      <h3
-        className="sc-ftvSup dWgAec"
-      >
-        hllo
-      </h3>
-    </div>
-  </div>
-  <div
-    className="sc-gsnTZi fUULEM"
+    className="sc-hKMtZM jOAVAW"
   >
     <div
-      className="swiper-container"
+      className="sc-gsnTZi hHsbvV"
     >
-      <div
-        className="swiper-wrapper"
-      >
-        <div
-          className="swiper-slide"
+      <div>
+        <select
+          className="sc-eCYdqJ kllLW"
+          disabled={false}
+          onChange={[Function]}
         >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
+          <option
+            value={1}
+          >
+            Season 
+            1
+          </option>
+          <option
+            value={2}
+          >
+            Season 
+            2
+          </option>
+          <option
+            value={3}
+          >
+            Season 
+            3
+          </option>
+          <option
+            value={4}
+          >
+            Season 
+            4
+          </option>
+          <option
+            value={5}
+          >
+            Season 
+            5
+          </option>
+          <option
+            value={6}
+          >
+            Season 
+            6
+          </option>
+          <option
+            value={7}
+          >
+            Season 
+            7
+          </option>
+          <option
+            value={8}
+          >
+            Season 
+            8
+          </option>
+        </select>
+        <h1
+          className="sc-iBkjds eQsPYB"
         >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
+          Hello
+        </h1>
+        <h3
+          className="sc-papXJ fqA-DFx"
         >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
-        >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
-        >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
-        >
-          <div />
-        </div>
-        <div
-          className="swiper-slide"
-        >
-          <div />
-        </div>
+          hllo
+        </h3>
       </div>
     </div>
     <div
-      className="sc-bczRLJ bFZkAs"
+      className="sc-dkzDqf DhxTb"
     >
-      <button
-        className="sc-jSMfEi kCZvHO"
-        id="swiper-prev"
+      <div
+        className="swiper-container"
       >
-        <svg
-          style={
-            Object {
-              "display": "inline",
-              "fill": "#ffffff",
-              "height": 24,
-              "lineHeight": 1,
-              "verticalAlign": "middle",
-              "width": 32,
-            }
-          }
-          viewBox="0 0 256 256"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="swiper-wrapper"
         >
-          <title>
-            previous
-          </title>
-          <path
-            d="M0 0h256v256H0z"
-            fill="none"
-          />
-          <path
-            d="M216 128H40M112 56l-72 72 72 72"
-            fill="none"
-            stroke="#ffffff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="16"
-          />
-        </svg>
-      </button>
-      <button
-        className="sc-jSMfEi kCZvHO"
-        id="swiper-next"
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+          <div
+            className="swiper-slide"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-bczRLJ bFZkAs"
       >
-        <svg
-          style={
-            Object {
-              "display": "inline",
-              "fill": "#ffffff",
-              "height": 24,
-              "lineHeight": 1,
-              "verticalAlign": "middle",
-              "width": 32,
-            }
-          }
-          viewBox="0 0 256 256"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          className="sc-gKXOVf jTMEYr"
+          id="swiper-prev"
         >
-          <title>
-            previous
-          </title>
-          <path
-            d="M0 0h256v256H0z"
-            fill="none"
-          />
-          <path
-            d="M40 128h176M144 56l72 72-72 72"
-            fill="none"
-            stroke="#ffffff"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="16"
-          />
-        </svg>
-      </button>
+          <svg
+            style={
+              Object {
+                "display": "inline",
+                "fill": "#ffffff",
+                "height": 24,
+                "lineHeight": 1,
+                "verticalAlign": "middle",
+                "width": 32,
+              }
+            }
+            viewBox="0 0 256 256"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              previous
+            </title>
+            <path
+              d="M0 0h256v256H0z"
+              fill="none"
+            />
+            <path
+              d="M216 128H40M112 56l-72 72 72 72"
+              fill="none"
+              stroke="#ffffff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
+            />
+          </svg>
+        </button>
+        <button
+          className="sc-gKXOVf jTMEYr"
+          id="swiper-next"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+                "fill": "#ffffff",
+                "height": 24,
+                "lineHeight": 1,
+                "verticalAlign": "middle",
+                "width": 32,
+              }
+            }
+            viewBox="0 0 256 256"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              previous
+            </title>
+            <path
+              d="M0 0h256v256H0z"
+              fill="none"
+            />
+            <path
+              d="M40 128h176M144 56l72 72-72 72"
+              fill="none"
+              stroke="#ffffff"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="16"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>

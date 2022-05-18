@@ -11,6 +11,13 @@ const ButtonContainer = styled.div`
   }
 `
 
+const EpisodeDescription = styled.div`
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+`
+
 const EpisodeSelection = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,12 +31,13 @@ const EpisodeSelection = styled.div`
 
 const Container = styled.div`
   max-width: 1280px;
-  width: 100%;
-  padding: 40px;
-  display: flex;
-  align-items: center;
   margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  height: 100%;
+
+  @media ${breakpoints.lg} {
+    grid-template-rows: 60% 40%;
+  }
 `
 
 const Select = styled.select`
@@ -43,7 +51,6 @@ const Select = styled.select`
 
 const Wrapper = styled.div<{ img: string }>`
   position: relative;
-  display: inline-grid;
   color: ${colors.white};
   height: 100%;
   background: ${colors.white};
@@ -52,10 +59,6 @@ const Wrapper = styled.div<{ img: string }>`
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-
-  @media ${breakpoints.lg} {
-    grid-template-rows: 60% 40%;
-  }
 
   .swiper-container {
     display: flex;
@@ -79,4 +82,4 @@ const Wrapper = styled.div<{ img: string }>`
   }
 `
 
-export { ButtonContainer, Container, EpisodeSelection, Select, Wrapper }
+export { ButtonContainer, Container, EpisodeDescription, EpisodeSelection, Select, Wrapper }
